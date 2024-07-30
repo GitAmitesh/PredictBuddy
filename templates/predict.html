@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/script.js"></script>
+</head>
+<body>
+    <div class="about">
+        {% if prediction is not none %}
+            {% if prediction == "Placed" %}
+                <div>
+                    <span style="font-size: 2rem; font-weight: bold;">Congratulations!🥳🎉</span><br><br>
+                     Your PredictBuddy has read your horoscope and you are likely to be...<br><br>
+                     <span style="font-size: 2.5rem; font-weight: bold; color: #66d9ef;">PLACED!!</span><br>
+                     Looks like you’re all set to conquer the world! 🌟 Your placement prediction is looking bright and shiny. Get ready to pop the confetti and celebrate because your hard work is about to pay off! 🥳✨ <br>
+                     Time to step into the spotlight and show everyone what you’re made of. The future is yours—go out there and rock it! 🚀💼
+                </div>
+            {% elif prediction == "Not Placed" %}
+                <div>
+                    <span style="font-size: 2rem; font-weight: bold;">Oops! 🚀</span><br><br>
+                    <span style="font-size: 1.4rem; font-weight: bold;">Our PredictBuddy has predicted you will not be placed.</span><br><br>
+                    Looks like the placement gods aren’t smiling today! 😅 But don’t worry, this is just a minor setback. Dust off your resume, power up your confidence, and get ready to impress the next opportunity that comes your way. <br>
+                    🌟 Remember, every great success story has its ups and downs—yours is just getting started! Keep pushing forward, and the future will be bright! 🌈
+                </div>
+            {% else %}
+                <h2>Prediction failed.</h2>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
